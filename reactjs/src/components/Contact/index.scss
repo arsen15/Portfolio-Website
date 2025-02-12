@@ -1,17 +1,26 @@
-.about {
-  text-align: center;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.contact {
+  position: relative;
+
+  .text-zone {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    width: calc(100% - 80px);
+    text-align: left;
+  }
 
   h1 {
-    font-size: 2rem;
-    color: #282c34;
+    margin: 0;
+    color: #fff;
+    font-size: 56px;
+    font-family: "Coolvetica";
+    font-weight: 400;
+    letter-spacing: 3px;
   }
 
   p {
-    font-size: 1.2rem;
-    color: #666;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ddd;
   }
 }

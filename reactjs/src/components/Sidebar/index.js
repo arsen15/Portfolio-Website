@@ -1,6 +1,11 @@
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faUser, faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faUser,
+  faHome,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Sidebar = () => {
@@ -14,13 +19,39 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <nav>
-        <a href="#home" onClick={() => scrollToSection("home")}>
+        <a
+          href="#home"
+          onClick={() => scrollToSection("home")}
+          className="home-link"
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </a>
-        <a href="#experience" onClick={() => scrollToSection("experience")}>
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+        <a
+          href="#experience"
+          onClick={() => scrollToSection("experience")}
+          className="experience-link"
+        >
+          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
         </a>
-        <a href="#contact" onClick={() => scrollToSection("contact")}>
+        <a
+          href="#projects"
+          onClick={() => scrollToSection("projects")}
+          className="projects-link"
+        >
+          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
+        </a>
+        <a
+          href="#education"
+          onClick={() => scrollToSection("education")}
+          className="education-link"
+        >
+          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
+        </a>
+        <a
+          href="#contact"
+          onClick={() => scrollToSection("contact")}
+          className="contact-link"
+        >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </a>
       </nav>

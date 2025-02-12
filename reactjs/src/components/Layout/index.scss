@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+.nav-bar {
+  width: 60px;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 50px; /* Ensure content doesn't overlap with sidebar */
+}
+
+.section {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Only apply flexbox centering to specific sections */
+.section.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
