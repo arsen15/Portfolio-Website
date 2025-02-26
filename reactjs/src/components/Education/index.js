@@ -1,11 +1,15 @@
 import React from "react";
 import "./index.scss";
+import "../page.scss";
 
 const Education = () => {
   return (
     <div className="education">
-      <h1>Education</h1>
-      <p>This is the Education page content.</p>
+      <div className="page-header-container">
+        <div className="page-header">
+          <h1>Education</h1>
+        </div>
+      </div>
     </div>
   );
 };

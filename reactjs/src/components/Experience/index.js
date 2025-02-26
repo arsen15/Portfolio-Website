@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "../page.scss";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,8 +14,8 @@ import CardActions from "@mui/material/CardActions";
 const Experience = () => {
   return (
     <div id="experience" className="experience">
-      <div className="experience-header-container">
-        <div className="experience-header">
+      <div className="page-header-container">
+        <div className="page-header">
           <h1>Experience</h1>
         </div>
       </div>

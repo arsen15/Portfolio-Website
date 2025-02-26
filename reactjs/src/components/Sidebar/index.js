@@ -5,6 +5,8 @@ import {
   faUser,
   faHome,
   faBriefcase,
+  faCode,
+  faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -38,14 +40,14 @@ const Sidebar = () => {
           onClick={() => scrollToSection("projects")}
           className="projects-link"
         >
-          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
         </a>
         <a
           href="#education"
           onClick={() => scrollToSection("education")}
           className="education-link"
         >
-          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faGraduationCap} color="#4d4d4e" />
         </a>
         <a
           href="#contact"
