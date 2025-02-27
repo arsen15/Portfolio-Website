@@ -25,9 +25,12 @@ const Projects = () => {
           <h1>Projects</h1>
         </div>
       </div>
-      <h3>Click on the buttons below to see my projects.</h3>
+      <h3 className="header-title">
+        Click on the buttons below to see my projects.
+      </h3>
       <div className="project-buttons-container">
         {/* Button 1 */}
+
         <Button
           variant="outlined"
           className="project-button"
@@ -39,11 +42,9 @@ const Projects = () => {
             className="project-button-img"
           />
         </Button>
-        {selectedProject === "mobileApp" && (
-          <p className="project-description">This is a mobile app project.</p>
-        )}
 
         {/* Button 2 */}
+
         <Button
           variant="outlined"
           className="project-button"
@@ -55,13 +56,9 @@ const Projects = () => {
             className="project-button-img"
           />
         </Button>
-        {selectedProject === "penguinGame" && (
-          <p className="project-description">
-            This is a 2D platformer game made in Unity.
-          </p>
-        )}
 
         {/* Button 3 */}
+
         <Button
           variant="outlined"
           className="project-button"
@@ -73,13 +70,9 @@ const Projects = () => {
             className="project-button-img"
           />
         </Button>
-        {selectedProject === "towerDefenseGame" && (
-          <p className="project-description">
-            This is a tower defense game made in Unity.
-          </p>
-        )}
 
         {/* Button 4 */}
+
         <Button
           variant="outlined"
           className="project-button"
@@ -91,10 +84,47 @@ const Projects = () => {
             className="project-button-img"
           />
         </Button>
-        {selectedProject === "dndWebsite" && (
-          <p className="project-description">This is a DnD website project.</p>
-        )}
       </div>
+      {selectedProject && (
+        <p className="project-description">
+          {selectedProject === "mobileApp" &&
+            "Developed an Android weather and messaging app in a 5-member team. Implemented Log-in authentication functionality using JSON web tokens. Developed the feature of adding and deleting a contact on the Contacts page. Utilized Agile and Scrum methodologies to manage the project workflow"
+              .split(". ")
+              .map((sentence, index) => (
+                <React.Fragment key={index}>
+                  {sentence}.<br />
+                  <br />
+                </React.Fragment>
+              ))}
+          {selectedProject === "penguinGame" &&
+            "Led a team of 8 developers to develop a web game using Unity game engine and C#. Utilized interfaces and events to implement a flexible item collection system. Designed and programmed enemy behavior including area patrol, path finding, and attacks"
+              .split(". ")
+              .map((sentence, index) => (
+                <React.Fragment key={index}>
+                  {sentence}.<br />
+                  <br />
+                </React.Fragment>
+              ))}
+          {selectedProject === "towerDefenseGame" &&
+            "Fruit Fortress is a 3D tower defense game made in Unity. I utlized Object Pooling for object spawning and destruction. In addition, I designed and implemented enemy pathfinding algorithm, wave system, and tower targeting and shooting systems"
+              .split(". ")
+              .map((sentence, index) => (
+                <React.Fragment key={index}>
+                  {sentence}.<br />
+                  <br />
+                </React.Fragment>
+              ))}
+          {selectedProject === "dndWebsite" &&
+            "Created a website that allows Dungeons and Dragons players to create and store spells for games. Designed and developed user interface with React.js. Implemented a database to store and manage data using MySQL"
+              .split(". ")
+              .map((sentence, index) => (
+                <React.Fragment key={index}>
+                  {sentence}.<br />
+                  <br />
+                </React.Fragment>
+              ))}
+        </p>
+      )}
     </div>
   );
 };
