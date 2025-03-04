@@ -20,36 +20,30 @@ const Education = () => {
         </div>
       </div>
       <div className="card-wrapper">
-        <Card
-          className="education-card"
-          sx={{
-            position: "relative",
-            height: 400,
-            width: 1000,
-            backgroundImage: `url(${uw_background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-            textAlign: "center",
-            overflow: "hidden",
-          }}
-        >
+        <Card className="education-card">
+          {/* Background image overlay */}
+          <div className="card-background"></div>
+
+          <div className="card-gradient"></div>
+
           <CardActionArea>
             <CardContent className="card-content">
-              <div className="text-container">
-                <Typography className="main-text">
-                  Bachelor of Science in Computer Science and Systems
-                </Typography>
-                <Typography className="hover-text">
-                  GPA: 3.5 <br />
-                  Related Courses: Data Structures, Algorithms, Operating
-                  Systems, Cloud Computing, Database Systems Design, Mobile
-                  Application Programming.
-                </Typography>
-              </div>
+              <Typography className="main-text">
+                Bachelor of Science in Computer Science and Systems
+              </Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontSize: { xs: "16px", md: "20px", lg: "24px" },
+                }}
+              >
+                <b>GPA:</b> 3.5 <br />
+              </Typography>
+              <Typography className="hover-text">
+                <b>Related Courses:</b> Data Structures, Algorithms, Operating
+                Systems, Cloud Computing, Database Systems Design, Mobile
+                Application Programming.
+              </Typography>
             </CardContent>
           </CardActionArea>
         </Card>

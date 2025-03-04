@@ -17,45 +17,115 @@
 }
 
 .education-card {
+  width: 1000px;
+  height: 500px;
   position: relative;
-  overflow: hidden; // Prevent text from being visible before hover
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 14px;
+  background-color: transparent;
 
+  // Background Image Overlay
+  .card-background {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-image: url("../../assets/images/uw_background.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.009) 11.7%,
+      hsla(0, 0%, 0%, 0.034) 22.1%,
+      hsla(0, 0%, 0%, 0.072) 31.2%,
+      hsla(0, 0%, 0%, 0.123) 39.4%,
+      hsla(0, 0%, 0%, 0.182) 46.6%,
+      hsla(0, 0%, 0%, 0.249) 53.1%,
+      hsla(0, 0%, 0%, 0.32) 58.9%,
+      hsla(0, 0%, 0%, 0.394) 64.3%,
+      hsla(0, 0%, 0%, 0.468) 69.3%,
+      hsla(0, 0%, 0%, 0.54) 74.1%,
+      hsla(0, 0%, 0%, 0.607) 78.8%,
+      hsla(0, 0%, 0%, 0.668) 83.6%,
+      hsla(0, 0%, 0%, 0.721) 88.7%,
+      hsla(0, 0%, 0%, 0.762) 94.1%,
+      hsla(0, 0%, 0%, 0.79) 100%
+    );
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transform: translateY(100%);
+  }
+
+  // Text Content Box
   .card-content {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100%; // Initially only covers the bottom
-    background: rgba(0, 0, 0, 0.7); // Semi-transparent black
-    transition: height 0.6s ease-in-out; // Animate expansion
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; // Align text to bottom initially
-    //padding: 10px;
-    box-sizing: border-box;
+    height: 50px;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
   }
 
-  .text-container {
-    text-align: center;
-    color: white;
-    width: 100%;
-  }
+  // .card-content::before {
+  // content: "";
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba(0, 0, 0, 0) 0%,
+  //     rgba(0, 0, 0, 0.3) 60%,
+  //     rgba(0, 0, 0, 0.7) 100%
+  // );
+  // opacity: 0;
+  // transition: opacity 0.6s ease-in-out;
+  // //z-index: -1;
+  // }
 
   .main-text {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
-    //margin-bottom: 5px;
+    margin-bottom: 5px;
   }
 
   .hover-text {
-    font-size: 16px;
+    font-size: 25px;
     opacity: 0; // Initially hidden
     transition: opacity 0.3s ease-in-out;
+    text-align: left;
   }
 
+  // Hover Effects
+
   &:hover .card-content {
-    transform: translateY(-100%); // Expand to cover entire card
+    transform: translateY(-300%);
   }
+
+  &:hover .card-gradient {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  //   &:hover .card-content::before {
+  //     opacity: 1;
+  //   }
 
   &:hover .hover-text {
     opacity: 1; // Reveal additional text
