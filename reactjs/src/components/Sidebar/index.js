@@ -23,35 +23,50 @@ const Sidebar = () => {
       <nav>
         <a
           href="#home"
-          onClick={() => scrollToSection("home")}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("home");
+          }}
           className="home-link"
         >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </a>
         <a
           href="#experience"
-          onClick={() => scrollToSection("experience")}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("experience");
+          }}
           className="experience-link"
         >
           <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
         </a>
         <a
           href="#projects"
-          onClick={() => scrollToSection("projects")}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("projects");
+          }}
           className="projects-link"
         >
           <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
         </a>
         <a
           href="#education"
-          onClick={() => scrollToSection("education")}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("education");
+          }}
           className="education-link"
         >
           <FontAwesomeIcon icon={faGraduationCap} color="#4d4d4e" />
         </a>
         <a
           href="#contact"
-          onClick={() => scrollToSection("contact")}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("contact");
+          }}
           className="contact-link"
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />

@@ -32,16 +32,15 @@ const Experience = () => {
             <CardContent className="card-content">
               <div className="card-header">
                 <Typography gutterBottom variant="h2" component="div">
-                  Company
+                  Games for Love
                 </Typography>
                 <Typography gutterBottom variant="h3" component="div">
-                  Job Title
+                  Software Development Intern
                 </Typography>
               </div>
 
-              <hr />
-
               <Typography variant="body1" style={{ color: "black" }}>
+                <hr />
                 • Collaborated with game designers, artists, and sound engineers
                 to develop and publish C# and Unity Multimedia Applications on
                 Itch.io
@@ -56,11 +55,12 @@ const Experience = () => {
                 reported results to the team
                 <hr />• Created and maintained development documents for
                 stakeholder communication using Microsoft Excel and Word
+                <hr />
               </Typography>
-              <hr />
+
               <div className="card-header">
                 <Typography gutterBottom variant="body1" component="div">
-                  Lynnwood, WA | February 2024- September 2024
+                  Lynnwood, WA | February 2024 - September 2024
                 </Typography>
                 <CardActions>
                   <Button size="small" color="primary">
@@ -78,29 +78,33 @@ const Experience = () => {
             <CardContent className="card-content">
               <div className="card-header">
                 <Typography gutterBottom variant="h2" component="div">
-                  Company
+                  University of Washington
                 </Typography>
                 <Typography gutterBottom variant="h3" component="div">
-                  Job Title
+                  Research Assistant
                 </Typography>
               </div>
 
-              <hr />
-
               <Typography variant="body1" style={{ color: "black" }}>
-                • Content
                 <hr />
-                • Content
+                • Implemented Latent Dirichlet Allocation(LDA) model to analyze
+                issues and story points from 157 agile software development
+                projects to predict future topics/epics and assign estimates
                 <hr />
-                • Content
+                • Conducted text cleaning, tokenization, and stop word removal
+                to prepare data sets for modeling
                 <hr />
-                • Content
-                <hr />• Content
+                • Successfully developed and executed comprehensive test cases
+                to identify bugs and document results for analysis
+                <hr />
+                • Created graphical visualization of data for easy
+                interpretation
+                <hr />
               </Typography>
-              <hr />
+
               <div className="card-header">
                 <Typography variant="body1" component="div">
-                  City, WA | Month 2022- Month 2022
+                  Tacoma, WA | October 2022 - December 2022
                 </Typography>
                 <CardActions>
                   <Button size="small" color="primary">
